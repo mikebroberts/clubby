@@ -16,7 +16,7 @@ point for you (especially if you understand some clojure.)
 ## USAGE
 
 At present the best way to use this app is to fork, or download, the repository. To configure Clubby you
-need to set the CLUBHOUSE-KEY environment variable. To get such a key, go to Clubhouse, settings (the cog), 
+need to set the CLUBHOUSE_KEY environment variable. To get such a key, go to Clubhouse, settings (the cog), 
 'Your Account', API tokens. You can set this environment variable in the context in which you are running the app, 
 or if you're  a little more savvy with clojure you can create a `profiles.clj` file in the project root and 
 set them there.
