@@ -1,4 +1,4 @@
-(defproject clubby "0.1.0-SNAPSHOT"
+(defproject clubby "1.0.4"
   :description "Clubhouse Reporting"
   :url "https://github.com/mikebroberts/clubby"
   :license {:name "Apache License"
@@ -20,12 +20,4 @@
                  [ring/ring-json "0.4.0"]
                  [hiccup "1.0.5"]
                  ]
-  :plugins [
-            [lein-environ "1.0.1"]
-            ; For Web View
-            [lein-ring "0.9.6"]]
-
-  :main clubby.web
-  :ring {:handler clubby.web/app}
-  :uberjar-name "clubby-standalone.jar"
   )

@@ -15,15 +15,21 @@ point for you (especially if you understand some clojure.)
 
 ## USAGE
 
-At present the best way to use this app is to fork, or download, the repository. To configure Clubby you
-need to set the CLUBHOUSE_KEY environment variable. To get such a key, go to Clubhouse, settings (the cog), 
-'Your Account', API tokens. You can set this environment variable in the context in which you are running the app, 
-or if you're  a little more savvy with clojure you can create a `profiles.clj` file in the project root and 
-set them there.
+(!) This is in need of clean-up clarification
+ 
+As of 2016-05-20 Clubby is available as a JAR in clojars. Refer to the `sample-app` directory to 
+see ... a sample app. You'll need at least the `project.clj` file to define your own version of the app.
+If you don't have `lein` available use the version of that in the sample app, and if you want to deploy
+the app as a Docker container grap the Docker file too.
 
-To run a development Clubby instance from a terminal run `bin/lein ring server`. Wait
-a few seconds and after starting the app it should launch your default browser
-pointing to the app (at localhost:3000)
+To configure Clubby you need to set the CLUBHOUSE_KEY environment variable. To get such a key, 
+go to Clubhouse, settings (the cog), 'Your Account', API tokens. You can set this environment variable 
+in the context in which you are running the app, or if you're  a little more savvy with clojure you can 
+create a `profiles.clj` file in the project root and set it there.
+
+To run a development Clubby instance from a terminal run `bin/lein ring server` in the sample app. Wait
+a few seconds and after starting the app it should launch your default browser pointing to the app 
+(at localhost:3000)
 
 The home page of the app (available at '/') should show a list of the projects you have in your Clubhouse instance.
 You can then drill down into various project views.
@@ -32,15 +38,12 @@ To run in production you have a few options:
 * Run `bin/lein with-profile production trampoline run -m clubby.web`. By
 default the app will run on port 3001, but you can change that by setting a `PORT`
 environment variable.
-* If running on Amazon Elastic Beanstalk create a generic 'Single Container' docker 
-application for the application artifact run the following command, and use the 
-resulting zip file: `git archive --format=zip HEAD > clubby.zip`
 * If you're more Clojure savvy you can compile an Uberjar or Uberwar and use that.
+* Finally you can use the included Dockerfile to build a Docker container and deploy that where you will
 
 I also use various Clubby functions from a REPL.
  
 You can further configure Clubby by setting various 'state list' variables. You'll need to do this
-in a Clojure profile, or just hand-edit the defaults towards the bottom of `src/clubby/core.clj` - see the
-`config-for` function.
+in a Clojure profile.
 
 I'd welcome feedback in Github, or on twitter @mikebroberts
