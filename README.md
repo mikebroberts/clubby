@@ -3,7 +3,7 @@
 Clubby is a reporting web application for the [Clubhouse](https://clubhouse.io/) software team management tool. It
 provides some iteration and roll-up views that Clubhouse itself doesn't have (yet!)
 
-**Please note this project is not currently maintains, and uses an old version (V1) of the Clubhouse API. V2 of the Clubhouse API offers more features.**
+**Please note this project is not currently maintained, and uses an old version (V1) of the Clubhouse API. V2 of the Clubhouse API offers more features.**
 
 For those who are comfortable coding in Clojure it also provides a set of functions that may help you if you're
 writing your own code against the Clubhouse API.
